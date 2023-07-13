@@ -2,16 +2,23 @@
         var valorDois = 0;
         var VarOperador = undefined;
 
+        var numTextElemesmo = ''
+
 
         function numero(numero){
             var display = document.querySelector('#display');
+            
 
             if(VarOperador === undefined){
                 display.value += numero;
                 valorUm = parseInt(display.value);
             }else{
                 display.value += numero;
-                valorDois += numero
+
+                let numeroTexto = numero.toString();
+
+                numTextElemesmo += numeroTexto;
+                valorDois = numTextElemesmo;
                 
             }
         }
@@ -27,23 +34,24 @@
 
         function igual(){
             var display = document.querySelector('#display');
+
             var resultado = undefined;
     
             switch(VarOperador){
 
                 case ' + ':
-                    resultado = valorUm + valorDois;
+                    resultado = valorUm + parseInt(valorDois);
                     break;
                 case ' - ':
-                    resultado = valorUm - valorDois;
+                    resultado = valorUm - parseInt(valorDois);
                     break;
 
                 case ' / ':
-                    resultado = valorUm / valorDois;
+                    resultado = valorUm / parseInt(valorDois);;
                     break;
                 
                 case ' x ':
-                    resultado = valorUm * valorDois;
+                    resultado = valorUm * parseInt(valorDois);;
                     break;
 
                 
@@ -53,6 +61,7 @@
             valorUm = resultado;
             valorDois = 0;
             VarOperador = undefined;
+            numTextElemesmo = '';
 
         }
 
@@ -63,6 +72,7 @@
             valorUm = 0;
             valorDois = 0;
             VarOperador = undefined;
+            numTextElemesmo = '';
 
         }
 
@@ -73,3 +83,4 @@
             console.log('valor2: ' + valorDois);
             
         }
+
