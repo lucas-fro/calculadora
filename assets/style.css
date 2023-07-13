@@ -21,6 +21,7 @@ body{
     max-width: 400px;
     background-color: rgb(42, 42, 42);
     border-radius: 20px;
+    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.386);
 }
 
 #display{
@@ -93,6 +94,12 @@ body{
     font-size: 3rem;
     border: none;
     outline: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn:active{
+    transform: scale(0.930);
 }
 
 .operadores{
