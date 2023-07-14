@@ -89,7 +89,22 @@
 
         }
 
-        function voltar(){
+        function backspace() {
+            var display = document.querySelector('#display');
+          
+            if (valorDois !== 0) {
+              let novoValorDois = numTextElemesmo.slice(0, -1);
+              numTextElemesmo = novoValorDois;
+              valorDois = parseFloat(novoValorDois);
+              display.value = display.value.slice(0, -1);
+            } else if (valorUm !== 0) {
+              let novoValorUm = valorUm.toString().slice(0, -1);
+              valorUm = parseFloat(novoValorUm);
+              display.value = novoValorUm;
+            }
+          }
+
+        function debug(){
             console.log('-------------')
             console.log('display: ' +  display.value);
             console.log('valor1: ' + valorUm);
@@ -98,3 +113,4 @@
             
         }
 
+        var debug2 = setInterval(debug, 1000);
