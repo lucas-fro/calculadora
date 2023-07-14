@@ -26,10 +26,20 @@
         function operador(op) {
             var display = document.querySelector('#display');
 
-            if (display.value !== '') {
+            if (display.value !== '' && VarOperador === undefined) {
                 VarOperador = op;
                 display.value += VarOperador;
+            }else{
+                novoOperador(op);
             }
+        }
+
+        function novoOperador(novoOperador){
+            var display = document.querySelector('#display');
+            display.value = '';
+
+            VarOperador = novoOperador;
+            display.value = valorUm + novoOperador
         }
 
         function igual(){
@@ -77,6 +87,7 @@
         }
 
         function voltar(){
+            console.log('-------------')
             console.log('display: ' +  display.value);
             console.log('valor1: ' + valorUm);
             console.log('operador: ' + VarOperador);
