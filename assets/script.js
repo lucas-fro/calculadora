@@ -11,7 +11,7 @@
 
             if(VarOperador === undefined){
                 display.value += numero;
-                valorUm = parseInt(display.value);
+                valorUm = parseFloat(display.value);
             }else{
                 display.value += numero;
 
@@ -50,18 +50,18 @@
             switch(VarOperador){
 
                 case ' + ':
-                    resultado = valorUm + parseInt(valorDois);
+                    resultado = valorUm + parseFloat(valorDois);
                     break;
                 case ' - ':
-                    resultado = valorUm - parseInt(valorDois);
+                    resultado = valorUm - parseFloat(valorDois);
                     break;
 
                 case ' / ':
-                    resultado = valorUm / parseInt(valorDois);;
+                    resultado = valorUm / parseFloat(valorDois);;
                     break;
                 
                 case ' x ':
-                    resultado = valorUm * parseInt(valorDois);;
+                    resultado = valorUm * parseFloat(valorDois);;
                     break;
 
                 
