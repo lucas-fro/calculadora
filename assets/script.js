@@ -44,6 +44,7 @@
 
         function igual(){
             var display = document.querySelector('#display');
+            var equacao = document.querySelector('#equacao');
 
             var resultado = undefined;
     
@@ -67,6 +68,7 @@
                 
             }
 
+            equacao.textContent = valorUm + VarOperador + valorDois + '='
             display.value = resultado;
             valorUm = resultado;
             valorDois = 0;
