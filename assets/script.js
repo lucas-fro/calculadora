@@ -3,6 +3,8 @@
         var VarOperador = undefined;
 
         var numTextElemesmo = ''
+        var equacao = document.querySelector('#equacao');
+
 
 
         function numero(numero){
@@ -44,7 +46,6 @@
 
         function igual(){
             var display = document.querySelector('#display');
-            var equacao = document.querySelector('#equacao');
 
             var resultado = undefined;
     
@@ -79,7 +80,7 @@
 
         function limpar(){
             var display = document.querySelector('#display');
-
+            equacao.textContent = '';
             display.value = '';
             valorUm = 0;
             valorDois = 0;
