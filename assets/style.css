@@ -30,7 +30,7 @@ body{
 
 #equacao{
     position: absolute;
-    top: 0;
+    top: 1px;
     right: 10px;
 
     color: #797979;
