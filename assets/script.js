@@ -104,13 +104,3 @@
             }
           }
 
-        function debug(){
-            console.log('-------------')
-            console.log('display: ' +  display.value);
-            console.log('valor1: ' + valorUm);
-            console.log('operador: ' + VarOperador);
-            console.log('valor2: ' + valorDois);
-            
-        }
-
-        var debug2 = setInterval(debug, 1000);
